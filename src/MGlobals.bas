@@ -11,13 +11,13 @@ Public Const UPDATECMD = "C:\Programme\TortoiseSVN\bin\TortoiseProc.exe /command
 Public Const REVERTCMD = "C:\Programme\TortoiseSVN\bin\TortoiseProc.exe /command:revert /notempfile /path:"
 Public Const DIFFCMD = "C:\Programme\TortoiseSVN\bin\TortoiseProc.exe /command:diff /path:"
 Public Const PATHCONCAT = "*"
-Public Const DIFFERCMD = "C:\Programme\WinMerge\WinMergeU.exe "
+Public Const DIFFERCMD = "C:\Program Files\WinMerge\WinMergeU.exe "
 
 ' file/project specific settings
 Public wbPath As String                     ' the path where source files are stored
 Public cmpComponents As VBIDE.VBComponents  ' currently selected project
 Public szFilename As String                 ' filename of current project (worbookname)
-Public Const folderExtension = ".src"       ' extension to be applied to filename (which is the folder of all modules' source files)
+Public Const folderExtension = ""       ' extension to be applied to filename (which is the folder of all modules' source files)
 
 ''' Error message constants.
 Public Const gszERR_VBPROJ_PROTECT As String = "Your version of Excel appears to have VB Project Protection enabled. The Code Cleaner cannot run with this setting. To solve this problem please take the following steps:" & vbLf & vbLf & _

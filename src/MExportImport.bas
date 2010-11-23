@@ -34,7 +34,12 @@ Function setwbPathAndName(wbproj As VBProject, ByRef componentSelected As Boolea
     setName wbproj.Parent.SelectedVBComponent
   End If
   Err.Clear
-  wbPath = wbproj.FileName
+  wbPath = Left(wbproj.FileName, InStrRev(wbproj.FileName, ".") - 1)
+  If Err <> 0 Then
+    MsgBox "You haven't saved the workbook yet"
+    Exit Function
+  End If
+  
   Set cmpComponents = wbproj.VBComponents
 
   If Err <> 0 Then
@@ -194,7 +199,7 @@ Sub LoadFrom()
 
   If Not setwbPathAndName(ThisWorkbook.VBProject.VBE.ActiveVBProject, componentSelected) Then Exit Sub
 Selection:
-  wbPath = displayFolderOpen("Select folder (...<Excelfilename>.src) to load module sources from...", wbPath)
+  wbPath = displayFolderOpen("Select folder to load module sources from...", wbPath)
   If wbPath = "" Then Exit Sub
 
   If componentSelected Then
