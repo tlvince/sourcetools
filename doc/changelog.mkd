@@ -1,0 +1,10 @@
+# File kept for historic reasons. See `git log` for later changes.
+
+04/04/2008: Added Usage section to the article
+10/05/2007
+    * Bug fix: Removed `VBEOnKey` again because of several severe side-effects
+      (regular invocation of VBA code isn't too healthy...)
+09/04/2007
+    * Bug fix: Loading now works for whole project
+    * Enhancement: Added Stephen Bullens' `VBEOnKey` to enable shortcuts
+15/03/2007: Initial post to The Code Project
