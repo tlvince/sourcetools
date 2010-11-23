@@ -4,8 +4,10 @@ to a net-based repository already).
 Then you need to install WinMerge to use the diff utility.
 
 Finally, installation is completed by simply copying SourceTools.xla into your
-XLStart folder. You also have to enable access to VB project in the menu: Tools/
-Macro/ Security, tab "Trusted Sources", checkbox "Trust access to Visual Basic
+XLStart folder (usually `C:\Program Files\Microsoft Office\OFFICE11\XLSTART`).
+
+You also have to enable access to VB project in the menu: Tools/ Macro/
+Security, tab "Trusted Sources", checkbox "Trust access to Visual Basic
 Project".
 
 Configuration is done in module MGlobals using mainly the following six
