@@ -1,0 +1,33 @@
+The first thing to do is to save the sources of the project by clicking the
+second button. This should create a directory called <Workbook/AddinName>.src
+with all components of your project as text files in it (named *.bas for plain
+modules, *.cls for classes, *.frm/*.frx for userforms and *.xwk for the
+Workbook's and Worksheet's code). So essentially everything you would get when
+exporting your components individually. 
+
+Then you should import BOTH the Workbook/Addin AND the <Workbook/AddinName>.src
+folder into a repository of your choice (on Sourceforge.net or your
+private/local one (that's when you need to download SVN itself, in case you
+don't want/need a repository for yourself, forget the SVN download, Tortoise is
+enough).
+
+After that, DELETE the Workbook/Addin AND the *.src folder (or better, move them
+into a safe place, if the following checkout fails). Once you have deleted these
+files/folder, then CHECKOUT the files you have just imported into the folder (or
+any other folder, but that means you're changing the location of your
+addin/workbook).
+
+Bear in mind, this is ALL still done OUTSIDE the Sourcetool, using plain
+TortoiseSVN functionality.  Now you're ready to use the SourceTool: Simply edit
+your project in the way you were used to, once finished click the commit button
+on the sourcetool toolbar in the VBA-IDE (button six) and you'll be presented
+the Tortoise commit dialog, showing either:
+
+1. All the components that changed since the last update (in case you selected
+   the project node)
+2. Just the component that you selected (if changed, if it's up to date,
+   Tortoise will tell you so)
+
+Updating your Project/single Component is done by pressing the fifth button,
+which downloads the latest version from the repository and imports the component
+file(s) into your project.

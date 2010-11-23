@@ -1,0 +1,27 @@
+First you need to install tortoiseSVN and subversion (in case you don't connect
+to a net-based repository already).
+
+Then you need to install WinMerge to use the diff utility.
+
+Finally, installation is completed by simply copying SourceTools.xla into your
+XLStart folder. You also have to enable access to VB project in the menu: Tools/
+Macro/ Security, tab "Trusted Sources", checkbox "Trust access to Visual Basic
+Project".
+
+Configuration is done in module MGlobals using mainly the following six
+constants:
+
+    ' SVN control commands, if needed, replace with other
+
+    Public Const COMMITCMD = "C:\Programme\TortoiseSVN\bin\TortoiseProc.exe
+        /command:commit /notempfile /path:"
+    Public Const UPDATECMD = "C:\Programme\TortoiseSVN\bin\TortoiseProc.exe
+        /command:update /rev /notempfile /path:"
+    Public Const REVERTCMD = "C:\Programme\TortoiseSVN\bin\TortoiseProc.exe
+        /command:revert /notempfile /path:"
+    Public Const DIFFCMD = "C:\Programme\TortoiseSVN\bin\TortoiseProc.exe
+        /command:diff /path:"
+    Public Const PATHCONCAT = "*"
+    Public Const DIFFERCMD = "C:\Programme\WinMerge\WinMergeU.exe"
+
+However, I'm sure that further customization will be needed in case a different version control system is used.

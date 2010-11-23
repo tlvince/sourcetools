@@ -1,0 +1,2 @@
+If a generic (shell called) version client shall be used, further entry dialogs
+(e.g. for entering the log messages) have to be added.

@@ -1,0 +1,5 @@
+* The great version tool subversion and its cool Windows Explorer-based client
+  tortoiseSVN, which I use now heavily for VBA source code versioning.
+
+* Also see Rob Bovey's site with the CodeCleaner addin (now also available as a
+  COM component) that forms the basis for the source code saving.

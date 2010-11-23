@@ -1,0 +1,37 @@
+sourcetool is a utility-addin for:
+
+1. extracting and loading source code from and to excel workbooks, templates and
+   add-ins
+2. comparing source code between different versions of above
+3. committing, updating, reverting and comparing source code into a version
+   control system different from vss (currently only svn through tortoisesvn is
+   supported)
+
+most of the functionality builds upon rob boveys famous codecleaner addin,
+which was abused as a "sourcestripper" here.
+
+the various functions can be accessed in the vba ide from the toolbar "source":
+
+* the first button is used to open a project or a selected component of a
+  project (common module, class module or userform). when opening, a folder
+  selection dialog allows to choose the directory where to load the components
+  from, saving is automatically done into a folder called <excelfilename>.src in
+  the same directory as the excel file:
+
+* the second button is used to save a project or a selected component of a
+  project (common module, class module or user form).
+* the third button allows to select a different version of the selected project
+  (this only works for projects as a whole) and shows the differences using a
+  pre-configured difference viewer (currently winmerge 2.4.6).
+
+after the separator, the rest of buttons are all used for version control:
+
+* the fourth button invokes the tool to check for differences between the
+  current copy (in memory) of the whole project or selected component with the
+  base version in the repository.
+* the fifth button updates the whole project or selected component from the
+  repository, notifying any conflicts.
+* the sixth button commits the whole project or selected component to the
+  repository, asking for a log message before.
+* Finally, the seventh button reverts the whole project or selected component
+  from the repository.
